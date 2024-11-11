@@ -107,7 +107,7 @@ async def genkey(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         else:
             response = "Usage: /genkey <amount> <hours/days>"
     else:
-        response = "ONLY OWNER CAN USE💀OWNER @LEGACY4REAL0"
+        response = "ONLY OWNER CAN USE💀OWNER @RAHUL_DDOS_B"
 
     await update.message.reply_text(response)
 
@@ -127,9 +127,9 @@ async def radeem(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             save_users()
             del keys[key]
             save_keys()
-            response = f"✅Key radeemed successfully! Access granted until: {users[user_id]} OWNER- @LEGACY4REAL0..."
+            response = f"✅Key radeemed successfully! Access granted until: {users[user_id]} OWNER- @RAHUL_DDOS_B..."
         else:
-            response = "Invalid or expired key buy from @LEGACY4REAL0."
+            response = "Invalid or expired key buy from @RAHUL_DDOS_B."
     else:
         response = "Usage: /radeem <key>"
 
@@ -158,7 +158,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("❌ Access expired or unauthorized. Please radeem a valid key. Buy key from @LEGACY4REAL0")
+        await update.message.reply_text("❌ Access expired or unauthorized. Please radeem a valid key. Buy key from @RAHUL_DDOS_B")
         return
 
     if len(context.args) != 3:
@@ -175,13 +175,13 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     
     user_processes[user_id] = {"process": process, "command": command, "target_ip": target_ip, "port": port}
     
-    await update.message.reply_text(f'Flooding parameters set: {target_ip}:{port} for {duration} seconds with {DEFAULT_THREADS} threads.OWNER- @LEGACY4REAL0')
+    await update.message.reply_text(f'Flooding parameters set: {target_ip}:{port} for {duration} seconds with {DEFAULT_THREADS} threads.OWNER- @RAHUL_DDOS_B')
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("❌ Access expired or unauthorized. Please radeem a valid key buy key from- @LEGACY4REAL0")
+        await update.message.reply_text("❌ Access expired or unauthorized. Please radeem a valid key buy key from- @RAHUL_DDOS_B")
         return
 
     if user_id not in user_processes or user_processes[user_id]["process"].poll() is not None:
@@ -199,11 +199,11 @@ async def stop(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("❌ Access expired or unauthorized. Please radeem a valid key buy key from- @LEGACY4REAL0")
+        await update.message.reply_text("❌ Access expired or unauthorized. Please radeem a valid key buy key from- @RAHUL_DDOS_B")
         return
 
     if user_id not in user_processes or user_processes[user_id]["process"].poll() is not None:
-        await update.message.reply_text('No flooding process is running.OWNER @LEGACY4REAL0')
+        await update.message.reply_text('No flooding process is running.OWNER @RAHUL_DDOS_B')
         return
 
     user_processes[user_id]["process"].terminate()
@@ -231,7 +231,7 @@ async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(response)
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text("🔑This is LEGACY's bot.\nCommands:\n/radeem <key>\n/stop\n/start\n/genkey <hours/days> \nOWNER- @LEGACY4REAL0")
+    await update.message.reply_text("🔑This is LEGACY's bot.\nCommands:\n/radeem <key>\n/stop\n/start\n/genkey <hours/days> \nOWNER- @RAHUL_DDOS_B")
 
 if __name__ == '__main__':
     load_data()
